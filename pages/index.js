@@ -31,9 +31,9 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="absolute top-0 right-0 mt-4 mr-4">
+      {/* <div className="absolute top-0 right-0 mt-4 mr-4">
         <ThemeButton />
-      </div>
+      </div> */}
 
       <h1 className="z-10 absolute top-0 mt-4 font-bold tracking-tight text-2xl text-indigo-800 dark:text-gray-200">
         <strong>Idont</strong>

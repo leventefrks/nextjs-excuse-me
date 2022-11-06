@@ -21,9 +21,12 @@ The other day, I bumped into this site called [Excuser API](https://excuser.hero
 ## Technologies
 
 - Next.js
+- Next-themes
 - TailwindCSS
 - axios
 - Excuser API
+- React Icons
+
 
 ## Design inspiration
 

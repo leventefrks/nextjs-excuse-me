@@ -5,12 +5,15 @@ import { FiSun } from "react-icons/fi";
 const ThemeButton = () => {
   const { resolvedTheme, setTheme } = useTheme();
 
+  const toggleTheme = () =>
+    setTheme(resolvedTheme === "dark" ? "light" : "dark");
+
   return (
     <button
       type="button"
       aria-label="Toggle Light & Dark Mode"
       className="flex items-center rounded-md bg-indigo-800 p-2 text-gray-100"
-      onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+      onClick={toggleTheme}
     >
       {resolvedTheme === "dark" ? (
         <CiDark className="h-6 w-6" />
