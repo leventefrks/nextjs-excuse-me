@@ -16,7 +16,7 @@ yarn dev
 
 ## The idea behind this project
 
-The other day, I bumped into this site called [Excuser API](https://excuser.herokuapp.com/) and wanted to make something fun using it with the new hip framework Next.js.
+The other day, I bumped into this site called [Excuser API](https://excuser.herokuapp.com/) and wanted to make something fun using the new hip framework Next.js.
 
 ## Technologies
 
