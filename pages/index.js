@@ -1,6 +1,7 @@
 import axios from "axios";
 import Head from "next/head";
 import React, { useState, useEffect } from "react";
+import ThemeButton from "../components/ThemeButton";
 import { HiClipboardCopy } from "react-icons/hi";
 import { ImTwitter } from "react-icons/im";
 import { FaGithub } from "react-icons/fa";
@@ -24,19 +25,23 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="relative flex flex-col items-center justify-center sm:px-6 w-full min-h-screen bg-yellow-200 overscroll-y-none font-sans">
+    <div className="relative flex flex-col items-center justify-center sm:px-6 w-full min-h-screen bg-yellow-200 dark:bg-gray-800 overscroll-y-none font-sans">
       <Head>
         <title>Excuse me Boss!</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1 className="absolute top-0 inset-x-1/2 mt-4 font-bold tracking-tight text-2xl text-indigo-800">
+      <div className="absolute top-0 right-0 mt-4 mr-4">
+        <ThemeButton />
+      </div>
+
+      <h1 className="z-10 absolute top-0 mt-4 font-bold tracking-tight text-2xl text-indigo-800 dark:text-gray-200">
         <strong>Idont</strong>
         <span className="font-medium">FeelLike</span>
         <strong>working</strong>
       </h1>
       <div className="text-center flex flex-col justify-center items-center">
-        <p className="h-10 z-10 relative mb-16 mx-6 leading-none font-bold text-xl md:text-3xl text-indigo-800">
+        <p className="h-10 z-10 relative mb-16 mx-6 leading-none font-bold text-xl md:text-3xl text-indigo-800 dark:text-gray-100">
           {excuse}
         </p>
         <p
@@ -45,22 +50,22 @@ const Home = () => {
         >
           I don't want to work
         </p>
-        <div className="relative z-10 flex flex-col sm:flex-row gap-4 items-center">
+        <div className="relative z-10 flex flex-col sm:flex-row gap-4 items-center text-indigo-800 dark:text-gray-200">
           <button className="flex items-center gap-1" onClick={copyToClipboard}>
-            <HiClipboardCopy className="h-6 w-6 text-indigo-800 cursor-pointer" />
-            <span className="text-indigo-800 text-sm">Copy to clipboard</span>
+            <HiClipboardCopy className="h-6 w-6  cursor-pointer" />
+            <span className="text-sm">Copy to clipboard</span>
           </button>
           <button
             type="button"
             onClick={fetchExcuse}
-            className="items-start text-sm py-1 px-4 uppercase bg-indigo-800 text-white rounded-md hover:bg-indigo-900"
+            className="items-start text-sm py-1 px-4 uppercase bg-indigo-800 text-gray-100 rounded-md hover:bg-indigo-900"
           >
             show me another excuse
           </button>
         </div>
       </div>
 
-      <div className="absolute bottom-0 mb-4 left-0 ml-4 flex gap-6 text-gray-700">
+      <div className="absolute bottom-0 mb-4 left-0 ml-4 flex gap-6 text-gray-700 dark:text-gray-200">
         <a href={twitterUrl} rel="noopener noreferrer" target="_blank">
           <ImTwitter className="h-6 w-6" />
         </a>
